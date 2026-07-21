@@ -489,3 +489,13 @@ connects to:
   Content One
 </section>
 ```
+
+```vue
+Vue 3
+├── Vite — project setup and build tool
+├── Vue Router — page navigation
+├── Pinia — global state management
+├── Tailwind CSS — styling
+└── Axios or TanStack Query — API requests
+
+```
