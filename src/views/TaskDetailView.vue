@@ -4,11 +4,6 @@ import { useRoute, useRouter } from "vue-router";
 import { useTaskStore } from "../stores/task";
 import type { TaskStatus,  TaskPriority } from "../types/task";
 
-// import { useTaskStore } from "@/stores/task";
-// import type {
-//   TaskPriority,
-//   TaskStatus,
-// } from "@/types/task";
 
 const route = useRoute();
 const router = useRouter();

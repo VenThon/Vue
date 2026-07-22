@@ -2,14 +2,12 @@
 import { reactive, ref } from "vue";
 import { useRouter } from "vue-router";
 
-// import { useTaskStore } from "@/stores/task";
-// import type {
-//   CreateTaskInput,
-//   TaskPriority,
-//   TaskStatus,
-// } from "@/types/task";
+import type {
+  CreateTaskInput,
+  TaskPriority,
+  TaskStatus,
+} from "@/types/task";
 import { useTaskStore } from "../stores/task";
-import type { CreateTaskInput, TaskStatus, TaskPriority } from "../types/task";
 
 const router = useRouter();
 const taskStore = useTaskStore();

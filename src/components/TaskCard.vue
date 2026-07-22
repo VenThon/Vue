@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import {ArrowUpRight} from "lucide-vue-next";
 import { computed } from "vue";
 import type { Task, TaskPriority,TaskStatus } from "../types/task";
 import Button from "./ui/button/Button.vue";
@@ -63,12 +64,19 @@ function handleStatusChange(event: Event) {
   >
     <div class="flex items-start justify-between gap-4">
       <div>
-        <RouterLink
-          :to="`/tasks/${task.id}`"
-          class="text-lg font-semibold text-slate-900 hover:text-blue-600"
-        >
-          {{ task.title }}
-        </RouterLink>
+       <RouterLink
+  :to="`/tasks/${task.id}`"
+  class="group inline-flex max-w-full items-center gap-2 text-base font-semibold text-slate-900 transition-colors hover:text-primary dark:text-slate-100"
+>
+  <span class="truncate underline-offset-4 group-hover:underline">
+    {{ task.title }}
+  </span>
+
+  <ArrowUpRight
+    class="size-4 shrink-0 text-slate-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary"
+    aria-hidden="true"
+  />
+</RouterLink>
 
         <p class="mt-2 line-clamp-2 text-sm text-slate-600">
           {{ task.description }}
@@ -96,7 +104,7 @@ function handleStatusChange(event: Event) {
       </span>
     </div>
 
-    <div class="mt-5 grid grid-cols-2  gap-2.5  items-center  border-t border-slate-100 pt-4">
+    <div class="mt-4 grid grid-cols-2  gap-2.5  items-center  border-slate-100 pt-4">
       <Select
         :model-value="task.status"
         @change="handleStatusChange"

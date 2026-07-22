@@ -5,7 +5,8 @@ import StatCard from "../components/StatCard.vue";
 import TaskCard from "../components/TaskCard.vue";
 import { useTaskStore } from "../stores/task";
 import type { TaskStatus } from "../types/task";
-import { CheckCircle2, CircleDashed, Clock3, ListTodo } from "@lucide/vue";
+import { CheckCircle2, CircleDashed, Clock3, ListTodo } from "lucide-vue-next";
+// import { CheckCircle2, CircleDashed, Clock3, ListTodo } from "@lucide/vue";
 
 const taskStore = useTaskStore();
 
